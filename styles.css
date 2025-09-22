@@ -1,0 +1,576 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: #fff;
+  overflow-x: hidden;
+  
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Smooth transitions */
+a, button, .skills-box, .skills-box3, .project-image-content, .contact-box {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating and Pulsing animation */
+@keyframes floatPulse {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+}
+
+/* Navbar styling */
+.navbar {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-bottom: 3px ridge rgb(0, 0, 0);
+}
+
+#name {
+  margin-left: 50px;
+  letter-spacing: 5px;
+}
+
+.icons {
+  margin-right: 30px;
+}
+
+.navbtn ul {
+  list-style: none;
+  display: flex;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.navbtn li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.navbtn a {
+  position: relative;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  padding-bottom: 5px;
+}
+
+.navbtn a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: rgb(210, 216, 191);
+  transition: width 0.3s ease-in-out;
+}
+
+.navbtn a:hover::after {
+  width: 100%;
+}
+
+.navbtn a:hover {
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: grey;
+  color: white;
+  gap: 20px;
+  position: relative;
+  border-bottom: 3px ridge black;
+}
+
+.name-intro {
+  position: absolute;
+  padding: 9px 20px;
+  font-weight: 500;
+  left: 40px;
+}
+
+.hero-section #name-hi {
+  font-size: x-large;
+  margin-left: 3px;
+  font-weight: bold;
+}
+
+.hero-section #name-high {
+  font-family: 'LEMON MILK', sans-serif;
+  font-size: 3vw;
+}
+
+.hero-section #name-block {
+  font-size: large;
+  margin-left: 5px;
+}
+
+#button1 {
+  margin-top: 5px;
+  padding: 10px 20px;
+  background-color: rgb(210, 216, 191);
+  color: white;
+  font-family: "Space Mono", monospace;
+  border-radius: 40px;
+  border: 3px ridge white;
+}
+
+#button1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#button1 a {
+  text-decoration: none;
+  color: black;
+}
+
+.circle-blur {
+  position: absolute;
+  padding: 13%;
+  background-color: rgba(221, 227, 201, 0.3);
+  backdrop-filter: blur(30px);
+  border-radius: 50%;
+  right: 150px;
+  animation: floatPulse 6s ease-in-out infinite;
+}
+
+.profile {
+  z-index: 1;
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* About Section */
+.about-section {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  color: black;
+  gap: 20px;
+  border-bottom: 3px ridge black;
+}
+
+#lap {
+  position: relative;
+  right: 80px;
+  top: 20px;
+}
+
+.about-me {
+  position: relative;
+  background-color: white;
+  width: 30%;
+  left: 40px;
+}
+
+#about--me {
+  font-family: 'LEMON MILK', sans-serif;
+  margin-bottom: 10px;
+  font-size: x-large;
+}
+
+#about--me2 {
+  font-family: "Space Mono", monospace;
+}
+
+.circle-black {
+  position: absolute;
+  padding: 14%;
+  background-color: rgba(221, 227, 201, 0.3);
+  backdrop-filter: blur(30px);
+  border-radius: 50%;
+  right: 1220px;
+  z-index: 0;
+  border: 3px solid rgb(210, 216, 191);
+  animation: floatPulse 7s ease-in-out infinite;
+}
+
+/* Skills Section */
+.skills-section {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 100px 30px;
+  background-color: rgb(221, 227, 201);
+  color: black;
+  border-bottom: 3px ridge black;
+}
+
+.skills-box{
+  padding: 50px 0;
+  width: 25%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  backdrop-filter: blur(30px);
+  border: 3px ridge rgb(170, 171, 168);
+}
+
+.skills-box3{
+  padding: 28px 0;
+  width: 25%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  backdrop-filter: blur(30px);
+  border: 3px ridge rgb(170, 171, 168);
+}
+.skills-box:hover,
+.skills-box3:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.lang {
+  text-align: center;
+}
+
+.lang p {
+  margin-bottom: 20px;
+  font-family: 'LEMON MILK', sans-serif;
+  padding: 3px 2px;
+  background-color: rgb(221, 227, 201);
+}
+
+.lang li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.circle-black2 {
+  position: absolute;
+  padding: 25%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(30px);
+  border-radius: 50%;
+  left: 1200px;
+  z-index: 0;
+  border: 3px solid rgb(189, 190, 183);
+  animation: floatPulse 8s ease-in-out infinite;
+}
+
+/* Projects Section */
+#projects {
+  background: #fff;
+  color: #000;
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 3px ridge black;
+  position: relative;
+}
+
+#projects h2 {
+  font-family: 'LEMON MILK', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #202035; /* Charcoal Blue from theme */
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 3px ridge rgb(170, 171, 168);
+  border-radius: 10px;
+  width: 300px;
+  padding: 24px;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(20px);
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.project-card h3 {
+  margin-bottom: 12px;
+  font-family: 'LEMON MILK', sans-serif;
+  color: #4E4E50; /* Dark Gray */
+}
+
+.project-details {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.show-more {
+  background: #DDE3C9; /* Pale Olive theme color */
+  color: #000;
+  border: 2px ridge #000;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-family: "Space Mono", monospace;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.show-more:hover {
+  transform: scale(1.05);
+  background: #c9d3a6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.see-more {
+  background: #202035; /* Charcoal Blue */
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-family: "Space Mono", monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.see-more:hover {
+  background: #DDE3C9; /* Pale Olive */
+  color: #000;
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 768px) {
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+}
+
+
+/* Contacts Section */
+.contacts-section {
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: grey;
+  color: white;
+  gap: 20px;
+  border-bottom: 3px ridge black;
+}
+
+.contact-heading {
+  text-align: center;
+  font-family: "Space Mono", monospace;
+  font-size: 2rem;
+  color: white;
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px 25px;
+  border: 3px ridge white;
+  border-radius: 6px;
+  backdrop-filter: blur(15px);
+  font-family: "Space Mono", monospace;
+}
+
+.contact-box:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.contact-box img {
+  width: 30px;
+  height: 30px;
+}
+
+.contact-box a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+/* Footer */
+.footer-note {
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  background-color: rgba(0, 0, 0, 0.814);
+  font-family: "Space Mono", monospace;
+  color: #fff;
+  border-top: 3px ridge black;
+}
+
+/*Responsive*/
+  @media screen and (max-width: 1024px) {
+
+
+    #name-block{
+      font-size: small;
+    }
+
+    .hero-section {
+      flex-direction: column;
+      height: auto;
+    }
+
+    #name{
+      position: relative;
+      right: 14px;
+      font-size: large;
+
+    }
+
+    .name-intro {
+      position: relative;
+      left: 0;
+      text-align: center;
+      top:30px;
+    }
+    .name-intro #name-hi{
+      font-size: small;
+    }
+
+    .name-intro #name-high{
+      font-size: large;
+    }
+
+    .name-intro #name-block{
+      font-size: small;
+    }
+
+    .profile {
+      position: relative;
+      width: 80%;
+      height: auto;
+      right: 0;
+    }
+
+    .about-section {
+      flex-direction: column;
+      height: auto;
+      padding: 40px 20px;
+    }
+
+    #lap {
+      position: relative;
+      right: 0;
+      top: 0;
+    }
+
+    .about-me {
+      width: 80%;
+      left: 0;
+      text-align: center;
+    }
+
+    .about-me #about--me{
+      font-size: medium;
+    }
+
+    .about-me #about--me2{
+      font-size: small;
+    }
+    .skills-section {
+      flex-direction: column;
+      height: auto;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+
+    .skills-box, .skills-box3 {
+      width: 90%;
+    }
+
+    .contacts-section {
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .navbar {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    .navbtn {
+      display: none;
+      }
+
+    .icons {
+      margin: 10px 0;
+    }
+
+    .circle-blur,
+    .circle-black,
+    .circle-black2 {
+      display: none;
+    }
+  }
