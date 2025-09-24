@@ -59,6 +59,7 @@ a, button, .skills-box, .skills-box3, .project-image-content, .contact-box {
   align-items: center;
   background-color: white;
   border-bottom: 3px ridge rgb(0, 0, 0);
+  position: sticky;
 }
 
 #name {
@@ -573,4 +574,5 @@ a, button, .skills-box, .skills-box3, .project-image-content, .contact-box {
     .circle-black2 {
       display: none;
     }
+
   }
